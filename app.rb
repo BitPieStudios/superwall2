@@ -14,7 +14,20 @@ post '/posts' do
   Post.create(:body => params[:body])
   redirect to('/')
 end
+post '/posts/:id/upvote' do
+	post = Post.where(:id => params[:id]).first
+	post.votes += 1
+	post.save
 
+	redirect to('/')
+end
+post '/posts/:id/downvote' do
+	post = Post.where(:id => params[:id]).first
+	post.votes -= 1
+	post.save
+
+	redirect to('/')
+end
 get '/todo' do
   erb :todo
 end

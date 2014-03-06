@@ -1,11 +1,15 @@
 body {
-  background-color: white;
   font-family: Helvetica, Arial, sans-serif;
+  cursor:url(cursor2.png),url(cursor.gif),auto;
+  background-position: fixed;
+  background: -webkit-linear-gradient(#BA54AE, #826741); /* For Safari 5.1 to 6.0 */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #page {
   margin: 0 auto; /* This centers the #page div horizontally */
-  width: 700px;
+  width: 300px;
 }
 
 #page nav {
@@ -24,10 +28,20 @@ body {
 }
 
 #post-form textarea {
-  width: 400px;
+  width: 100%;
   min-height: 50px;
 }
 
 #content {
   font
+}
+#logo {
+width:300px;
+}
+a {
+  color:#C2A584;
+  text-shadow:1px 1px 1px #573F25;
+}
+form {
+  display:inline;
 }
