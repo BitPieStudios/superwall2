@@ -1,13 +1,13 @@
-<img src="/logo.png">
+<img id="logo" src="/logo.png">
 <img id="logo" src="/banner.png">
 
 <div id="post-form">
   <form action="/posts" method="post">
     <div>
-      <textarea name="body"></textarea>
+      <textarea class="postarea" name="body"></textarea>
     </div>
     <div>
-      <input type="submit" value="Post">
+      <input class="butt" type="submit" value="Post">
     </div>
   </form>
 </div>
@@ -16,22 +16,28 @@
     <li>
       <!-- Read http://www.ruby-doc.org/core-2.1.1/Time.html#method-i-strftime 
            for information about how this strftime voodoo works -->
-      <p><%= post.created_at.strftime('%A, %B %-d, %Y') %></p>
+      <p class="posthead"><%= post.created_at.strftime('%A, %B %-d, %Y') %></p>
+            <p class="usepost"><%= escape(post.body) %></p>
       <p>
         <form action="/posts/<%= post.id%>/upvote" method="post">
-          <strong>Votes</strong>: <%= post.votes %>
-          <input type="submit" value="Upvote!">
+          <p class="vote">Votes: <%= post.votes %></p>
+          <input class="butt" type="submit" value="Upvote!">
           </form>
+
           <form action="/posts/<%= post.id%>/downvote" method="post">
-          <input type="submit" value="Downvote!">
+          <input class="butt" type="submit" value="Downvote!">
         </form>
+
+         <form action="/posts/<%= post.id%>/delii" method="post">
+          <input class="butt" type="submit" value="Delete">
+        </form>
+
       </p>
 
 
       <!-- What does "escape" do here?  What happens if you remove it? -->
       <!-- Try creating a post that contains HTML and see how that post looks
            with and without the call to escape() -->
-      <p><%= escape(post.body) %></p>
     </li>
   <% end %>
 </ol>

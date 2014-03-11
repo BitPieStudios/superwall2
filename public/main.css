@@ -9,7 +9,7 @@ body {
 
 #page {
   margin: 0 auto; /* This centers the #page div horizontally */
-  width: 300px;
+  width: 600px;
 }
 
 #page nav {
@@ -36,7 +36,7 @@ body {
   font
 }
 #logo {
-width:300px;
+width:600px;
 }
 a {
   color:#C2A584;
@@ -45,3 +45,39 @@ a {
 form {
   display:inline;
 }
+p.posthead {
+  color:#574027;
+  text-decoration:bold;
+  text-shadow:1px 1px 2px black;
+}
+input.butt {
+  font-size: 12px;
+color:#7A153F;
+background: -webkit-linear-gradient(#BDAE9F, #8A6F54);
+border:solid 2px #7A153F;
+border-radius:10px;
+box-shadow: 3px 3px 2px #423626;
+}
+textarea.postarea{
+  color: #5C4841;
+  background-color:#CFA3C8;
+}
+p.vote{
+  color:#7A153F;
+  text-shadow:2px 2px 3px #423626;
+  display: inline-block;
+  margin-right: 15px;
+
+}
+p.usepost{
+  color: #45321E;
+  border:solid 1px #7A153F;
+  background-color:#CFA3C8;
+  border-radius: 6px;
+  padding:5px;
+  text-align: center;
+}
+
+
+
+

@@ -28,6 +28,11 @@ post '/posts/:id/downvote' do
 
 	redirect to('/')
 end
+post '/posts/:id/delii' do
+	post = Post.where(:id => params[:id]).first
+	post.delete
+	redirect to('/')
+end
 get '/todo' do
   erb :todo
 end
