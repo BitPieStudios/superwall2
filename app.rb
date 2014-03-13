@@ -11,8 +11,13 @@ get '/' do
 end
 
 post '/posts' do
-  Post.create(:body => params[:body])
-  redirect to('/')
+
+	if !params[:body].empty?
+		Post.create(:body => params[:body])
+ 		redirect to('/')
+	else
+		redirect to('/')
+	end
 end
 post '/posts/:id/upvote' do
 	post = Post.where(:id => params[:id]).first
@@ -31,6 +36,7 @@ end
 post '/posts/:id/delii' do
 	post = Post.where(:id => params[:id]).first
 	post.delete
+
 	redirect to('/')
 end
 get '/todo' do

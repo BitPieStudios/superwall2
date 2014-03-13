@@ -60,7 +60,8 @@ box-shadow: 3px 3px 2px #423626;
 }
 textarea.postarea{
   color: #5C4841;
-  background-color:#CFA3C8;
+  background-color:#C779BE;
+  border:solid 1px #7A153F;
 }
 p.vote{
   color:#7A153F;
@@ -72,10 +73,11 @@ p.vote{
 p.usepost{
   color: #45321E;
   border:solid 1px #7A153F;
-  background-color:#CFA3C8;
+  background-color:#C779BE;
   border-radius: 6px;
   padding:5px;
   text-align: center;
+  box-shadow: 3px 3px 2px #423626;
 }
 
 
